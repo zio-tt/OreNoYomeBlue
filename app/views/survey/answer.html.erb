@@ -1,0 +1,13 @@
+<h2><%= @answer.content %></h2>
+<%= image_tag @answer.image_path, alt: "Answer Image" %>
+</br>
+<% if @answer.id != 1 %>
+  <% match_result = @answer.content.match(/\【(.*?)\】/) %>
+  <%= link_to "https://twitter.com/intent/tweet?text=私の嫁は#{match_result[1]}です。%0A&url=#{ request.url }", target: :_blank, rel: "noopener noreferrer" do %>
+    俺の嫁を自慢する
+  <% end %>
+<% else %>
+  <%= link_to "https://twitter.com/intent/tweet?text=嫁は今から見つけます・・・。%0A&url=#{ request.url }", target: :_blank, rel: "noopener noreferrer" do %>
+    嫁がいないことを嘆く
+  <% end %>
+<% end %>

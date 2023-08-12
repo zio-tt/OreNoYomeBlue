@@ -1,0 +1,11 @@
+/* application.css */
+.parent-container {
+  display: flex;
+  justify-content: center; /* 横方向中央揃え */
+  align-items: center; /* 縦方向中央揃え */
+  height: 100vh; /* 画面の高さいっぱいに拡張 */
+}
+
+.centered-content {
+  text-align: center; /* コンテンツのテキストを中央揃え */
+}

@@ -1,0 +1,10 @@
+<h1><%= @question.content %></h1>
+<button class="choice" data-choice="1" data-next-id="<%= @question.next_page1_id %>" data-next-style="<%= @question.next_page1_style %>"><%= @question.choice1 %></button>
+<button class="choice" data-choice="2" data-next-id="<%= @question.next_page2_id %>" data-next-style="<%= @question.next_page2_style %>"><%= @question.choice2 %></button>
+
+<% content_for :reload do %>
+  <meta name="turbo-visit-control" content="reload">
+<% end %>
+<% content_for :js do %>
+  <%= javascript_import_module_tag "question" %>
+<% end %>
